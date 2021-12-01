@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MobileApp</string>
+    <string name="alert">알림</string>
+    <string name="rooting_error">루팅된 단말입니다.개인정보 유출의 위험성이 있으므로 서비스를 종료합니다.</string>
+    <string name="network_error">네트워크가 연결되지 않았습니다. 잠시 후 다시 시도해 주세요.</string>
+    <string name="network_error2">네트워크가 불안정합니다. 잠시 후 다시 시도해 주세요.</string>
+    <string name="network_error3">네트워크 상태가 좋지 않아서 앱을 종료합니다.\n앱을 다시 실행해 주세요.</string>
+    <string name="gps_error">위치설정이 꺼져있습니다. 위치설정을 키고 앱을 재 실행해주세요.</string>
+    <string name="gps_on">현재 위치 수집을 허용하시겠습니까?</string>
+    <string name="already_connected_scanner">이미 연결된 스캐너가 있습니다.</string>
+    <string name="could_not_get_current_location">현재 위치를 가져올 수 없습니다.\n잠시후 시도 해주세요.</string>
+    <string name="bluetooth_off_error">블루투스가 꺼져있습니다.블루투스를 키고 앱을 재 실행해주세요.</string>
+    <string name="disconnected_scanner">기기 연결이 해제되었습니다.</string>
+    <string name="not_work_gps">위치수집이 정상적으로 처리되지 않을 수 있습니다.</string>
+    <string name="no_gps2">위치 정확도 향상을 위하여,\nWi-Fi설정을 켜주세요.</string>
+    <string name="barcode_title">상품 상세</string>
+    <string name="turnoverscanner_title">인계 스캔</string>
+    <string name="takescanner_title">인수 스캔</string>
+    <string name="scannumber">운송장번호</string>
+    <string name="scan_yn">스캔\n여부</string>
+    <string name="scanyn">스캔 여부</string>
+    <string name="status">상태</string>
+    <string name="etc">비고</string>
+    <string name="order">순서</string>
+    <string name="clientname">고객명</string>
+
+    <string name="finish_dep">상차 완료</string>
+    <string name="finish_take">인수 완료</string>
+    <string name="ok">확인</string>
+
+    <string name="no_order_number">운송장번호가 없습니다.</string>
+    <string name="error_has_occurred">오류가 발생했습니다.</string>
+    <string name="already_scanned_barcode">이미 스캔을 완료한 운송장입니다.</string>
+    <string name="already_checkscanned_barcode">스캔을 취소하시겠습니까?</string>
+    <string name="error_barcode">잘못된 운송장입니다.</string>
+    <string name="error_barcode_save">운송장 저장에 실패하였습니다.</string>
+    <string name="error_tak_barcode_save">인수 스캔을 실패하였습니다.</string>
+    <string name="error_scan_cancel">상차취소 처리를 실패하였습니다.</string>
+    <string name="error_no_barcode_number">운송장번호가 없습니다.</string>
+    <string name="error_faile_chk">인수 검수가 완료되지 않았습니다.\n 먼저 인수 검수를 완료하시기 바랍니다.</string>
+    <string name="load_complete">상차를 완료 합니다.</string>
+    <string name="trans_load_complete">인계를 완료 합니다.</string>
+    <string name="unload_complete">하차를 완료 합니다.</string>
+    <string name="unknown_complete">\'미상차 처리가 완료되었습니다.\'</string>
+
+</resources>

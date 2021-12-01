@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/takezxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"></com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/taketitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/barcode_title_backgroundColor"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/takeonClickClosed"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ico_prev"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/BigCustomDefaultWhiteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/takescanner_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/taketopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/taketitleLayout">
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/takescanYnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/taketopLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/takescanCntTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="321"
+                android:textColor="@color/scan_status_color" />
+
+            <TextView
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="/" />
+
+            <TextView
+                android:id="@+id/takeallCntTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="321" />
+
+            <TextView
+                android:id="@+id/takepercentTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="321"
+                android:textColor="@color/scan_status_color" />
+
+
+            <TextView
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/scan_status_color" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/takeplashOff"
+            android:layout_width="93dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_btn_background"
+            android:backgroundTint="#cccccc"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/taketoggleImage2"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/toggle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/ico_flashlight_off"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/taketoggleImage2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/takeplashOn"
+            android:layout_width="93dp"
+
+            android:layout_height="34dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_btn_background"
+            android:backgroundTint="#ea5f00"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/taketoggleImage"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/toggle_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/ico_flashlight_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/taketoggleImage"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/takebottomLayout"
+        app:layout_constraintTop_toBottomOf="@+id/takescanYnLayout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/scan_title_lineColor"
+            app:layout_constraintBottom_toTopOf="@+id/takebottomLayout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/scan_title_backgourndColor"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/order" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scannumber" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/clientname" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scan_yn"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/etc" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/scan_title_lineColor"
+            app:layout_constraintBottom_toTopOf="@+id/takebottomLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/takerecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/scan_title_lineColor"
+        app:layout_constraintBottom_toTopOf="@+id/takebottomLayout" />
+
+    <LinearLayout
+        android:id="@+id/takebottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/takecompleteButton"
+            style="@style/BigCustomDefaultWhiteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="35dp"
+            android:background="#6e6e6e"
+            android:gravity="center"
+            android:text="@string/finish_take" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transbackgroundlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/transitemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+
+        app:layout_constraintTop_toBottomOf="@+id/topLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/transorderNumber"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/transscanNumber"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scannumber" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/transscanYN"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/transstatus"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="고객명" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/transscanEtcLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+                <TextView
+                    android:id="@+id/transscanYn"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="RtlCompat" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/scan_title_lineColor"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/transbottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barcode_scan_line"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/transtopLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barcode_scan_line"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/transleftLine"
+        android:layout_width="@dimen/barcode_scan_line"
+        android:layout_height="0dp"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="@id/transitemLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/transitemLayout" />
+
+    <View
+        android:id="@+id/transrightLine"
+        android:layout_width="@dimen/barcode_scan_line"
+        android:layout_height="0dp"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="@id/transitemLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/transitemLayout" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/transgroupLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="transrightLine,transleftLine,transtopLine,transbottomLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

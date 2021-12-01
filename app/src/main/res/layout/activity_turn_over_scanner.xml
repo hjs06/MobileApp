@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransScan.TurnOverScannerActivity">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/trunover_zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"></com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/turnoverTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/barcode_title_backgroundColor"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/turnoverOnClickClosed"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ico_prev"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/BigCustomDefaultWhiteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turnoverscanner_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/turnoverTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/turnoverTitleLayout">
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/turnoverScanYnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/turnoverTopLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/turnoverScanCntTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="321"
+                android:textColor="@color/scan_status_color"
+                android:visibility="invisible"/>
+
+            <TextView
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="/"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/turnoverAllCntTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="321"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/turnoverPercentTextView"
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="321"
+                android:textColor="@color/scan_status_color"
+                android:visibility="invisible"/>
+
+
+            <TextView
+                style="@style/CustomDefaultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/scan_status_color"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/turnoverPlashOff"
+            android:layout_width="93dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_btn_background"
+            android:backgroundTint="#cccccc"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/turnoverToggleImage2"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/toggle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/ico_flashlight_off"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/turnoverToggleImage2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/turnoverPlashOn"
+            android:layout_width="93dp"
+
+            android:layout_height="34dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_btn_background"
+            android:backgroundTint="#ea5f00"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/turnoverToggleImage"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/toggle_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/ico_flashlight_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/turnoverToggleImage"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/turnoverBottomLayout"
+        app:layout_constraintTop_toBottomOf="@+id/turnoverScanYnLayout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/scan_title_lineColor"
+            app:layout_constraintBottom_toTopOf="@+id/turnoverBottomLayout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/scan_title_backgourndColor"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/order" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scannumber" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scan_yn" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/clientname" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+                <TextView
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scanyn" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/scan_title_lineColor"
+            app:layout_constraintBottom_toTopOf="@+id/turnoverBottomLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/turnoverRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/scan_title_lineColor"
+        app:layout_constraintBottom_toTopOf="@+id/turnoverBottomLayout" />
+
+    <LinearLayout
+        android:id="@+id/turnoverBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/turnoverCompleteButton"
+            style="@style/BigCustomDefaultWhiteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="35dp"
+            android:background="#6e6e6e"
+            android:gravity="center"
+            android:text="@string/ok" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

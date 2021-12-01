@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="default_text_color_white">#ffffff</color>
+    <color name="default_text_color">#000000</color>
+    <color name="default_color">#00574B</color>
+    <color name="button_bg_color">#D81B60</color>
+    <color name="barcode_title_textcolor">#555555</color>
+    <color name="barcode_title_backgroundColor">#4e8dcb</color>
+    <color name="scan_title_backgourndColor">#f2f2f2</color>
+    <color name="scan_title_lineColor">#cccccc</color>
+    <color name="scan_select_lineColor">#eb1919</color>
+    <color name="scan_status_color">#eb1919</color>
+    <color name="barcode_point_color">#eb1919</color>
+
+
+
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="titlebar_size">40dp</dimen>
+    <dimen name="default_text_size">15dp</dimen>
+    <dimen name="default_dialog_button_size">20dp</dimen>
+    <dimen name="default_dialog_title_size">20dp</dimen>
+    <dimen name="barcode_scan_line">4dp</dimen>
+</resources>

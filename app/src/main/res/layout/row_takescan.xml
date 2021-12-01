@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/takebackgroundlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/takeitemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/takebottomLayout"
+
+        app:layout_constraintTop_toBottomOf="@+id/taketopLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/takeorderNumber"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9">
+
+                <TextView
+                    android:id="@+id/takescanNumber"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scannumber" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/takestatus"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="고객명" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:id="@+id/takescanYN"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/scan_yn" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/scan_title_lineColor" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/takescanEtcLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#cccccc"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#cccccc"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <View
+                    android:id="@+id/takeleftInboxLine"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#cccccc"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/takerightInboxLine"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#cccccc"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/takescanEtc"
+                    style="@style/CustomDefaultTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="dsfdsfsdfsdfsdfsdf"
+                    app:layout_constraintLeft_toRightOf="@+id/takeleftInboxLine"
+                    app:layout_constraintRight_toLeftOf="@+id/takeimageview" />
+
+                <ImageView
+                    android:id="@+id/takeimageview"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/ico_selectarrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/scan_title_lineColor"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/takebottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barcode_scan_line"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/taketopLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barcode_scan_line"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/takeleftLine"
+        android:layout_width="@dimen/barcode_scan_line"
+        android:layout_height="0dp"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="@id/takeitemLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/takeitemLayout" />
+
+    <View
+        android:id="@+id/takerightLine"
+        android:layout_width="@dimen/barcode_scan_line"
+        android:layout_height="0dp"
+        android:background="@color/scan_select_lineColor"
+        app:layout_constraintBottom_toBottomOf="@id/takeitemLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/takeitemLayout" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/takegroupLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="takerightLine,takeleftLine,taketopLine,takebottomLine" />
+</androidx.constraintlayout.widget.ConstraintLayout>
